@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  overflow: hidden;
+}
+
+.hide {
+ 	display: none;
+ }
+
+.move1 {
+	position: absolute;
+	background-color: blue;
+	cursor: crosshair;
+	width: 20px;
+	height: 20px;
+	left: 200px;
+	top: 0px;
+	/*offset-path: path('M 0 0 V 500 H 0 L 0 0');
+	offset-path: path('M 5 8 m -10, 0 a 4,20 0 1,0 8,0 a 4,-10 0 1,0 -10,0');*/
+	animation: move 100s linear 1 forwards;
+}
+
+.move2 {
+	position: relative;
+	background-color: red;
+	width: 100px;
+	/*offset-path: path('M 5 8 m -10, 0 a 4,20 0 1,0 8,0 a 4,-10 0 1,0 -10,0');
+	animation: move 3s linear infinite;*/
+}
+
+@keyframes move {
+  100% {
+    top: 100vh;
+  }
+}
